@@ -5,30 +5,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation'; 
 
 const Navbar = () => {
-  const [isConnected, setIsConnected] = useState(false);
-  const [walletAddress, setWalletAddress] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname(); // this works with app router
 
-  // Mock function to connect wallet - replace with your actual wallet connection logic
-  const connectWallet = async () => {
-    try {
-      // This is where you'd add your actual wallet connection code
-      // For example, using ethers.js or web3.js to connect to MetaMask
-      console.log("Connecting to wallet...");
-      
-      // Simulate successful connection with mock data
-      setIsConnected(true);
-      setWalletAddress('0x1234...5678');
-    } catch (error) {
-      console.error("Failed to connect wallet:", error);
-    }
-  };
+  
 
-  const disconnectWallet = () => {
-    setIsConnected(false);
-    setWalletAddress('');
-  };
+  
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
@@ -37,52 +19,33 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          {/* Logo and brand */}
+        <div className="flex justify-between h-25">
+          {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <span className="text-xl font-bold">CryptoWallet</span>
             </Link>
           </div>
 
-          {/* Desktop navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Desktop  */}
+          <div className="hidden md:flex items-center space-x-4 ">
             <Link href="/" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-              Dashboard
+                Home
             </Link>
             <Link href="/assets" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/assets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-              Assets
+              Wallets
             </Link>
             <Link href="/transactions" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/transactions' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-              Transactions
+              Support
             </Link>
             <Link href="/swap" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/swap' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-              Swap
+              About
             </Link>
             
-            {isConnected ? (
-              <div className="flex items-center ml-4">
-                <span className="px-3 py-2 rounded-md text-sm font-medium bg-gray-800">
-                  {walletAddress.substring(0, 6)}...{walletAddress.substring(walletAddress.length - 4)}
-                </span>
-                <button 
-                  onClick={disconnectWallet}
-                  className="ml-2 px-3 py-2 rounded-md text-sm font-medium bg-red-700 hover:bg-red-600"
-                >
-                  Disconnect
-                </button>
-              </div>
-            ) : (
-              <button 
-                onClick={connectWallet}
-                className="ml-4 px-4 py-2 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-500"
-              >
-                Connect Wallet
-              </button>
-            )}
+            
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile */}
           <div className="flex md:hidden items-center">
             <button 
               onClick={toggleMobileMenu}
@@ -106,38 +69,20 @@ const Navbar = () => {
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <Link href="/" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-            Dashboard
+            Home
           </Link>
           <Link href="/assets" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/assets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-            Assets
+            Wallets
           </Link>
           <Link href="/transactions" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/transactions' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-            Transactions
+            Support
           </Link>
           <Link href="/swap" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/swap' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-            Swap
+            About
           </Link>
           
-          {isConnected ? (
-            <div className="pt-4">
-              <div className="px-3 py-2 rounded-md text-base font-medium bg-gray-800">
-                {walletAddress.substring(0, 6)}...{walletAddress.substring(walletAddress.length - 4)}
-              </div>
-              <button 
-                onClick={disconnectWallet}
-                className="mt-2 w-full px-3 py-2 rounded-md text-base font-medium bg-red-700 hover:bg-red-600"
-              >
-                Disconnect
-              </button>
-            </div>
-          ) : (
-            <button 
-              onClick={connectWallet}
-              className="mt-4 w-full px-3 py-2 rounded-md text-base font-medium bg-blue-600 hover:bg-blue-500"
-            >
-              Connect Wallet
-            </button>
-          )}
+         
+          
         </div>
       </div>
     </nav>
