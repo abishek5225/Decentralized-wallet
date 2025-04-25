@@ -10,8 +10,6 @@ const Navbar = () => {
 
   
 
-  
-
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -23,22 +21,22 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold">CryptoWallet</span>
+              <span className="text-5xl font-bold">GuardianChain</span>
             </Link>
           </div>
 
           {/* Desktop  */}
-          <div className="hidden md:flex items-center space-x-4 ">
-            <Link href="/" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+          <div className="hidden md:flex items-center space-x-10 ">
+            <Link href="/" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
                 Home
             </Link>
-            <Link href="/assets" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/assets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            <Link href="/assets" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/assets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
               Wallets
             </Link>
-            <Link href="/transactions" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/transactions' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            <Link href="/transactions" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/transactions' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
               Support
             </Link>
-            <Link href="/swap" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/swap' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            <Link href="/swap" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/swap' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
               About
             </Link>
             
