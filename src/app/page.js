@@ -10,7 +10,7 @@ export default function HomePage() {
         <div className="h-48 mb-8 bg-gray-800 rounded-xl overflow-hidden relative">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-purple-900"></div>
           <div className="absolute inset-0 p-6 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold">Welcome to Web3</h2>
+            <h2 className="text-5xl text-center text-gray-900 dark:text-white">Welcome to Web3</h2>
             <p className="text-gray-400">Your Assets Your Control</p>
           </div>
         </div>
