@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'; 
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname(); // this works with app router
@@ -30,7 +31,7 @@ const Navbar = () => {
             <Link href="/" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
                 Home
             </Link>
-            <Link href="/assets" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/assets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            <Link href="/wallets" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/wallets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
               Wallets
             </Link>
             <Link href="/transactions" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/transactions' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
@@ -69,7 +70,7 @@ const Navbar = () => {
           <Link href="/" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             Home
           </Link>
-          <Link href="/assets" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/assets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+          <Link href="/wallets" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/wallets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             Wallets
           </Link>
           <Link href="/transactions" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/transactions' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
