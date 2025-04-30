@@ -1,8 +1,11 @@
 'use client';
+import { useState } from "react";
+import { Chrome, Smartphone, ArrowRight, Download } from 'lucide-react';
 
 import Head from "next/head";
 
 export default function Wallets() {
+    const [activeTab, setActiveTab] = useState('browser');
     return (
 
         <div className="min-h-screen bg-gray-800">
@@ -17,9 +20,34 @@ export default function Wallets() {
                 </div>
                 {/* download section */}
 
-                <div className="bg-white shadow rounded-lg overflow-hidden">
+                <div className="bg-white shadow rounded-lg overflow-hidden mt-8 bg-gray-50 h-90">
                     <div className="flex  border-b">
-                        <button className={`flex-1 py-4 `}></button>
+                    <button
+              className={`flex-1 py-5 px-6 text-center font-medium w-30 transition-colors duration-200 ${
+                activeTab === 'browser'
+                  ? 'text-indigo-600 border-b-2 border-indigo-600 bg-indigo-50'
+                  : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+              }`}
+              onClick={() => setActiveTab('browser')}
+            >
+              <div className="flex items-center justify-center">
+                <Chrome className="w-5 h-5 mr-2" />
+                Browser Extension
+              </div>
+            </button>
+            <button
+              className={`flex-1 py-5 px-6 text-center font-medium transition-colors duration-200 ${
+                activeTab === 'mobile'
+                  ? 'text-indigo-600 border-b-2 border-indigo-600 bg-indigo-50'
+                  : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+              }`}
+              onClick={() => setActiveTab('mobile')}
+            >
+              <div className="flex items-center justify-center">
+                <Smartphone className="w-5 h-5 mr-2" />
+                Mobile App
+              </div>
+            </button>
 
                     </div>
                 </div>
