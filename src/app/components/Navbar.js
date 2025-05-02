@@ -31,13 +31,13 @@ const Navbar = () => {
             <Link href="/" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
                 Home
             </Link>
-            <Link href="/wallets" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/wallets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-              Wallets
+            <Link href="/Download" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/Download' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+              Download
             </Link>
             <Link href="/browserwallet" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/browserwallet' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             Browser Wallet
             </Link>
-            <Link href="/about" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/about' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            <Link href="/About" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/About' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
               About
             </Link>
             
@@ -70,13 +70,13 @@ const Navbar = () => {
           <Link href="/" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             Home
           </Link>
-          <Link href="/wallets" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/wallets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-            Wallets
+          <Link href="/Download" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/Download' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            Download
           </Link>
           <Link href="/browserwallet" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/browserwallet' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             Browser Wallet
           </Link>
-          <Link href="/about" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/about' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+          <Link href="/About" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/About' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             About
           </Link>
           
