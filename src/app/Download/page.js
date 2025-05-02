@@ -23,9 +23,9 @@ export default function Download() {
                 </div>
                 {/* download section */}
                 
-                <div className="bg-gray-700 shadow rounded-lg overflow-hidden mt-8 bg-gray-50 h-30 flex gap-4">
+                <div className="bg-gray-700 shadow rounded-lg overflow-hidden mt-8 bg-gray-50 h-30 flex gap-5">
                     <button 
-                    className="flex  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    className="w-full bg-blue-500 hover:bg-blue-700 text-white flex items-center gap-2  py-2 px-4 rounded"
                     onClick={() => window.open('https://guardianchain.com/download', '_blank')}
                     >
                         <CiMobile1  className="w-20 h-30"/>
@@ -34,7 +34,7 @@ export default function Download() {
                         
                     
                     <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white flex items-center gap-2  py-2 px-4 rounded"
+                    className="w-full bg-blue-500 hover:bg-blue-700 text-white flex items-center gap-2  py-2 px-4 rounded"
                     onClick={()=> window.open('https://guardianchain.com/download', '_blank')}
                     >
                         <AiOutlineDesktop className="w-20 h-30" />
