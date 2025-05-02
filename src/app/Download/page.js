@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import { CiMobile1 } from "react-icons/ci";
+import { AiOutlineDesktop } from "react-icons/ai";
 
 
 import Head from "next/head";
@@ -27,15 +28,18 @@ export default function Download() {
                     className="flex  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     onClick={() => window.open('https://guardianchain.com/download', '_blank')}
                     >
-                        <CiMobile1  className="h-30 w-80 flex"/>
+                        <CiMobile1  className="w-20 h-30"/>
                         <span >Download Mobile App</span>
                         </button>
                         
                     
                     <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    className="bg-blue-500 hover:bg-blue-700 text-white flex items-center gap-2  py-2 px-4 rounded"
                     onClick={()=> window.open('https://guardianchain.com/download', '_blank')}
-                    >Download BrowserExtension</button>
+                    >
+                        <AiOutlineDesktop className="w-20 h-30" />
+                        <span>Download BrowserExtension</span>
+                        </button>
                 </div>
 
             </main>
