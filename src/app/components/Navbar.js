@@ -34,7 +34,7 @@ const Navbar = () => {
             <Link href="/Download" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/Download' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
               Download
             </Link>
-            <Link href="/browserwallet" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/browserwallet' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            <Link href="/BrowserWallet" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/BrowserWallet' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             Browser Wallet
             </Link>
             <Link href="/About" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/About' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
@@ -73,7 +73,7 @@ const Navbar = () => {
           <Link href="/Download" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/Download' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             Download
           </Link>
-          <Link href="/browserwallet" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/browserwallet' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+          <Link href="/BrowserWallet" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/BrowserWallet' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             Browser Wallet
           </Link>
           <Link href="/About" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/About' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
