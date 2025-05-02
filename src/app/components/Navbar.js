@@ -34,10 +34,10 @@ const Navbar = () => {
             <Link href="/wallets" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/wallets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
               Wallets
             </Link>
-            <Link href="/transactions" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/transactions' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-              Support
+            <Link href="/browserwallet" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/browserwallet' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            Browser Wallet
             </Link>
-            <Link href="/swap" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/swap' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            <Link href="/about" className={`px-3 py-2 rounded-md text-2xl font-medium ${pathname === '/about' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
               About
             </Link>
             
@@ -73,10 +73,10 @@ const Navbar = () => {
           <Link href="/wallets" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/wallets' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             Wallets
           </Link>
-          <Link href="/transactions" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/transactions' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
-            Support
+          <Link href="/browserwallet" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/browserwallet' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+            Browser Wallet
           </Link>
-          <Link href="/swap" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/swap' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
+          <Link href="/about" className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === '/about' ? 'bg-gray-700' : 'hover:bg-gray-700'}`}>
             About
           </Link>
           
