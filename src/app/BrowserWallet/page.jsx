@@ -1,13 +1,26 @@
 'use client'
 
+import { useState } from "react";
+import { ArrowUpRight, ArrowDownLeft, BarChart2, Wallet, Settings, Bell, Search, Plus, Share2 } from 'lucide-react';
 export default function BrowserWallet() {
+
+    const [activeTab, setActiveTab] = useState('Browserwallet');
+    const [activeoperation, setActiveoperation] = useState('Send');
+    const [amount, setAmount]= useState('');
+    const [address, setAddress]= useState('');
+    const [selectedToken, setSelectedToken] = useState('ETH');
+
+    //dummy data
+    const walletData = {
+        balance: 2000,
+        usdValue:50000,
+        tokens:[
+            {symbol:'ETH', }
+        ]
+    }
     return (
-        <div className="min-h-screen bg-gray-900 text-white font-sans">
-            <div className=" flex flex-col items-center">
-            <textarea type="text" className="bg-gray-600  rounded h-90 w-100 resize-none"  placeholder="Enter your passpharse here. . ."/>
-            <button className="bg-blue-600 hover:bg-blue-700 mt-5 w-70 h-15 rounded">Unlock Wallet</button>
-            </div>
-                
+        <div>
+
         </div>
     );
 }
